@@ -7,4 +7,5 @@ repo init -u ssh://git@github.com/Cardinal-AOSP/manifest.git -b oreo -m crowdin.
 repo sync -c --no-tags -j8;
 
 # export CARDINAL_CROWDIN_API_KEY=
-./crowdin/crowdin_sync.py -b oreo
+# export CARDINAL_CROWDIN_BASE_PATH=
+./crowdin/crowdin_sync.py -b oreo -us -d -u #username
