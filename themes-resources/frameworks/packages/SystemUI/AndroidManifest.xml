@@ -22,6 +22,11 @@
         android:sharedUserId="android.uid.systemui"
         coreApp="true">
 
+    <!-- SysUI must be the one to define this permission; its name is
+         referenced by the core OS. -->
+    <permission android:name="android.permission.systemui.IDENTITY"
+        android:protectionLevel="signature" />
+
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -103,6 +108,7 @@
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
 
     <!-- Keyguard -->
+    <uses-permission android:name="com.android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS" />
     <uses-permission android:name="android.permission.CONTROL_KEYGUARD" />
     <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -190,7 +196,12 @@
     <!-- to access instant apps -->
     <uses-permission android:name="android.permission.ACCESS_INSTANT_APPS" />
 
+    <!-- to change themes - light or dark -->
+    <uses-permission android:name="android.permission.CHANGE_OVERLAY_PACKAGES" />
+
+    <!-- To take Screenshots -->
     <uses-permission android:name="android.permission.ACCESS_SURFACE_FLINGER" />
+    <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES" />
 
     <!-- Reboot -->
     <uses-permission android:name="android.permission.REBOOT" />
@@ -206,7 +217,7 @@
         android:icon="@drawable/icon"
         android:process="com.android.systemui"
         android:supportsRtl="true"
-        android:theme="@style/systemui_theme"
+        android:theme="@style/Theme.SystemUI"
         android:defaultToDeviceProtectedStorage="true"
         android:directBootAware="true">
         <!-- Keep theme in sync with SystemUIApplication.onCreate().
@@ -259,7 +270,7 @@
 
         <activity android:name=".tuner.TunerActivity"
                   android:icon="@drawable/tuner"
-                  android:theme="@style/TunerSettings"
+                  android:theme="@style/CustomTunerSettings"
                   android:label="@string/system_ui_tuner"
                   android:process=":tuner"
                   android:parentActivityName="com.cardinal.settings.WingsSettings"
@@ -268,7 +279,7 @@
 
         <activity android:name=".tuner.StatusBarIconsTunerActivity"
                   android:icon="@drawable/tuner"
-                  android:theme="@style/TunerSettings"
+                  android:theme="@style/CustomTunerSettings"
                   android:label="@string/statusbar_icons_blacklist"
                   android:process=":tuner"
                   android:parentActivityName="com.cardinal.settings.fragments.StatusBarSettings"
@@ -276,7 +287,7 @@
         </activity>
 
         <activity android:name=".tuner.NavBarTunerActivity"
-                  android:theme="@style/TunerSettings"
+                  android:theme="@style/CustomTunerSettings"
                   android:label="@string/navbar_tuner_activity"
                   android:process=":tuner"
                   android:parentActivityName="com.cardinal.settings.fragments.NavigationBarSettings"
@@ -284,7 +295,7 @@
         </activity>
 
         <activity android:name=".tuner.LockscreenTunerActivity"
-                  android:theme="@style/TunerSettings"
+                  android:theme="@style/CustomTunerSettings"
                   android:label="@string/lockscreen_tuner_activity"
                   android:process=":tuner"
                   android:parentActivityName="com.cardinal.settings.fragments.LockScreenSettings"
@@ -292,7 +303,7 @@
         </activity>
 
         <activity android:name=".tuner.PowerNotificationsTunerActivity"
-                  android:theme="@style/TunerSettings"
+                  android:theme="@style/CustomTunerSettings"
                   android:label="@string/powernotif_tuner_activity"
                   android:process=":tuner"
                   android:parentActivityName="com.cardinal.settings.fragments.StatusBarSettings"
@@ -302,7 +313,7 @@
         <activity-alias android:name=".DemoMode"
                   android:targetActivity=".tuner.TunerActivity"
                   android:icon="@drawable/tuner"
-                  android:theme="@style/TunerSettings"
+                  android:theme="@style/CustomTunerSettings"
                   android:label="@string/demo_mode"
                   android:process=":tuner"
                   android:exported="true">
@@ -342,15 +353,20 @@
             android:exported="false">
         </activity>
 
+        <!-- Springboard for launching the share activity -->
+        <receiver android:name=".screenshot.GlobalScreenshot$ShareReceiver"
+            android:process=":screenshot"
+            android:exported="false" />
+
         <!-- Callback for dismissing screenshot notification after a share target is picked -->
         <receiver android:name=".screenshot.GlobalScreenshot$TargetChosenReceiver"
-                  android:process=":screenshot"
-                  android:exported="false" />
+            android:process=":screenshot"
+            android:exported="false" />
 
         <!-- Callback for deleting screenshot notification -->
         <receiver android:name=".screenshot.GlobalScreenshot$DeleteScreenshotReceiver"
-                  android:process=":screenshot"
-                  android:exported="false" />
+            android:process=":screenshot"
+            android:exported="false" />
 
         <!-- started from UsbDeviceSettingsManager -->
         <activity android:name=".usb.UsbConfirmActivity"
@@ -424,7 +440,8 @@
         <!-- started from PipUI -->
         <activity
             android:name=".pip.tv.PipMenuActivity"
-            android:exported="true"
+            android:permission="com.android.systemui.permission.SELF"
+            android:exported="false"
             android:theme="@style/PipTheme"
             android:launchMode="singleTop"
             android:taskAffinity=""
@@ -433,24 +450,10 @@
             android:supportsPictureInPicture="true"
             androidprv:alwaysFocusable="true"
             android:excludeFromRecents="true" />
-        <activity
-            android:name=".pip.tv.PipOverlayActivity"
-            android:exported="true"
-            android:theme="@style/PipTheme"
-            android:taskAffinity=""
-            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|locale|layoutDirection"
-            android:resizeableActivity="true"
-            android:supportsPictureInPicture="true"
-            android:excludeFromRecents="true" />
-        <activity
-            android:name=".pip.tv.PipOnboardingActivity"
-            android:exported="true"
-            android:theme="@style/PipTheme"
-            android:launchMode="singleTop"
-            android:excludeFromRecents="true" />
 
         <activity
             android:name=".pip.phone.PipMenuActivity"
+            android:permission="com.android.systemui.permission.SELF"
             android:theme="@style/PipPhoneOverlayControlTheme"
             android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout"
             android:excludeFromRecents="true"
@@ -468,7 +471,6 @@
             android:exported="true"
             android:label="@string/dessert_case"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
-            android:hardwareAccelerated="true"
             android:launchMode="singleInstance"
             android:screenOrientation="locked"
             android:process=":sweetsweetdesserts"
@@ -484,7 +486,6 @@
                   android:exported="true"
                   android:icon="@drawable/icon"
                   android:label="@string/mland"
-                  android:hardwareAccelerated="true"
                   android:launchMode="singleInstance"
                   android:screenOrientation="locked"
                   android:process=":sweetsweetdesserts"

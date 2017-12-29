@@ -39,7 +39,7 @@
 
             <!-- Application snippet label, version and icon -->
             <include
-                layout="@layout/app_details"
+                layout="@layout/settings_entity_header"
                 android:id="@+id/app_snippet" />
 
         </LinearLayout>
