@@ -53,7 +53,7 @@ function copy_all () {
   for i in `seq 0 $(( ${#array[@]} - 1 ))`
   do
     cd $WORKING_DIR/packages/apps
-    cp -r ${array[i]} $WORKING_DIR/scripts/themes-resources/packages/apps/
+    cp -r ${array[i]} $WORKING_DIR/cardinal_extras/themes-resources/packages/apps/
   done
 }
 
@@ -101,7 +101,7 @@ else
   exit 1
 fi
 echo "Cloning Theme Resources repo"
-git clone https://github.com/Cardinal-AOSP/scripts.git
+git clone https://github.com/Cardinal-AOSP/cardinal_extras.git
 echo "Removing unneeded files"
 cd frameworks/base
 delete_useless ${frameworks[@]}
@@ -134,7 +134,7 @@ cd res
 delete_useless ${res[@]}
 cd values
 delete_useless ${values[@]}
-rm -rf  $WORKING_DIR/scripts/themes-resources/frameworks
+rm -rf  $WORKING_DIR/cardinal_extras/themes-resources/frameworks
 cd $WORKING_DIR
 cd $WORKING_DIR/packages/apps/CardinalOTA
 delete_useless ${common[@]}
@@ -145,12 +145,12 @@ delete_useless ${common[@]}
 cd $WORKING_DIR
 process_all ${theme_packages[@]}
 echo "Cleaning target folders"
-rm -rf scripts/themes-resources/packages
-mkdir scripts/themes-resources/packages
-mkdir scripts/themes-resources/packages/apps
-mkdir scripts/themes-resources/frameworks
-echo "Copying all files to $WORKING_DIR/scripts/themes-resources"
+rm -rf cardinal_extras/themes-resources/packages
+mkdir cardinal_extras/themes-resources/packages
+mkdir cardinal_extras/themes-resources/packages/apps
+mkdir cardinal_extras/themes-resources/frameworks
+echo "Copying all files to $WORKING_DIR/cardinal_extras/themes-resources"
 copy_all ${theme_packages[@]}
-cp -r $WORKING_DIR/frameworks/base/core $WORKING_DIR/frameworks/base/packages $WORKING_DIR/scripts/themes-resources/frameworks
-cp -r $WORKING_DIR/packages/apps/CardinalOTA $WORKING_DIR/scripts/themes-resources/packages/apps/
-cd $WORKING_DIR/scripts/themes-resources
+cp -r $WORKING_DIR/frameworks/base/core $WORKING_DIR/frameworks/base/packages $WORKING_DIR/cardinal_extras/themes-resources/frameworks
+cp -r $WORKING_DIR/packages/apps/CardinalOTA $WORKING_DIR/cardinal_extras/themes-resources/packages/apps/
+cd $WORKING_DIR/cardinal_extras/themes-resources
