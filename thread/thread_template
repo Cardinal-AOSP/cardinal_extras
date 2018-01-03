@@ -1,0 +1,138 @@
+[CENTER][IMG=""]https://img.xda-cdn.com/D9CeElxQ4Ogr0DEkraQueR3I-7w=/https%3A%2F%2Fimg.xda-cdn.com%2F4cg486Mw12MCw2xoopg7AAf_61w%3D%2Fhttps%253A%252F%252Fi.imgur.com%252F815C03f.png[/IMG]
+[CODE]/* Disclaimer 
+* I am not responsible for bricked devices, dead SD cards, thermonuclear war, 
+* or you getting fired because the alarm app failed. Please do some research 
+* if you have any concerns about features included in this ROM
+* before flashing it! YOU are choosing to make these modifications, and if
+* you blame me in any way for what happens to your device, I will laugh at you.
+* BOOM! goes the dynamite
+*/[/CODE][/CENTER]
+[SIZE=5][B]About Project:[/B][/SIZE] 
+   
+Cardinal-AOSP is a Custom ROM which was initially based on AOSPB, then we changed our mind and rebased it to AOSP-RRO, to get better compatibility with most of the devices. And now we are based on AOSP on oreo.  The main aim of this ROM is to bring stock AOSP experience as much as possible while maintaining performance, smoothness and good battery backup.   I hope that you'll all love this project, and help us, shape it even more better.   Meanwhile, all of our sources are publicly available on our Github. We also do own a Google+ Community, where you can.... uhm... you know, do  what all others do at forums and communities!  Hope you enjoy your stay and  like our work on Cardinal-AOSP.  [COLOR=red]
+[/COLOR]
+[COLOR=red]NOTE: we won't be accepting any feature requests, and only essential features will be added to enhance stock AOSP experience.[/COLOR]
+
+ [SIZE=4][B]Changes on top of AOSP:[/B][/SIZE]
+ • QS Tiles: Adb over network, Caffeine, Screenshot, Reboot, Sound, Volume, PiP, Headsup, compass, Accidental touch
+• Cardinal logo on statusbar
+• Signature spoofing support for MicroG
+• Comes with Pixel/Stock theme
+• Comes with Margarita substratum theme
+• Reboot to recovery/bootloader in powermenu
+• Latest Ringtones/Effects tones from Pixel image
+• Allow lower temp for night light
+• Accept All files over bluetooth option
+• Volume Adjustments Sound
+• Add SystemUI Tuner features into Wings
+• Disabled RescueParty
+• Enable Custom shapes option on Launcher3
+• Enable Developer option by default
+• Screenshot sound toggle
+• Reset Battery Stats
+• Ship with Jelly browser
+• L/R IME/Music Cursors
+• VoLTE icon toggle
+• DND Tile enhancements
+• HSPA+ icon
+• Add/Remove tiles with one click
+• Volume link/unlink notification and ringtone
+• Kill app button from recent screen
+• Mobile data always on disabled by default
+• Append app name to screenshot file name
+
+[SIZE=4] [B]*Wings*[/B][/SIZE]
+[B][SIZE=3] *General*[/SIZE][/B]
+• Configurable SystemUI theme (Wallpaper based, light, dark)
+• Wake on Plug
+• Sensor block-per package
+• In call vibrations
+
+[B][SIZE=3] *Status Bar*[/SIZE][/B]
+• Secured QS
+• QS title visibility
+• Custom QS layout configuration
+• Headsup toggle
+• Headsup whitelist/blacklist
+• Ticker notification
+• IME Selector notification toggle
+• Battery light/Notification light options
+• Network traffic meter
+• DT2S on Statusbar
+
+[SIZE=3][B]*Buttons* [/B][/SIZE]
+• Volume button wake
+• Volume button music control
+• Dynamic software Navigationbar/Hardware keys toggle
+• Accidental touch
+• Button backlight controls
+• Custom Key rebindings
+• Option to Disable Home key when ringing
+• Screen off actions
+
+[B][SIZE=3]*Lock Screen*[/SIZE][/B]
+• option to hide lockscreen shortcut on secured lockscreen
+• Lockscreen media art toggle
+• Option to unlock with FP directly after reboot
+
+[B][SIZE=3]*Recents*[/SIZE][/B]
+ • Clear all FAB option
+
+  [SIZE=5][B]Downloads:[/B][/SIZE]  
+[B]Download Cardinal-AOSP Official Builds:[/B] [URL="https://sourceforge.net/projects/cardinal-aosp/files/"<devicename>"</devicename>>/"]Sourceforge  [/URL]
+[B]Download 8.1 GApps:[/B] [URL="https://sourceforge.net/projects/cardinal-aosp/files/extras"]Sourceforge[/URL]  
+
+ [SIZE=5][B]Flashing Instructions:[/B][/SIZE]
+ [HIDE]- Download ROM and GApps 
+- Reboot to recovery and Backup existing ROM (Just in case!) 
+- Wipe System, Data, ART cache, Cache
+ - Flash ROM, Gapps and reboot...[/HIDE]  
+
+[SIZE=5][B]Credits[/B][/SIZE]
+ [HIDE]LineageOS
+NitrogenOS
+ AOSPA
+Omnirom
+ Ezio84
+[URL="https://forum.xda-developers.com/member.php?u=5222216"]@Recenz[/URL] for wonderful bootanimation
+[URL="https://forum.xda-developers.com/member.php?u=7772507"]@Wizper99[/URL] for awesome wallpaper
+[B]Extreme apologies if we've missed out someone, please feel free to PM, in case we've forgotten to pin your name here![/B][/HIDE]
+
+[SIZE=5][B]Bugs:[/B][/SIZE]
+There is webview crash on some apps like voot, use chrome as webview provider for now.
+
+[SIZE=5][B]FAQs:[/B] [/SIZE]
+  [B][COLOR=red]On what this ROM is based on?[/COLOR][/B] 
+As name says,  it's an AOSP based project!.
+
+ [B][COLOR=red]Does this ROM supports themes?[/COLOR][/B] 
+Yes!, and as a bonus, we shipping with our own theme called Margarita!.
+
+[B][COLOR=red]Error 7 while flashing on recovery, what should I do?[/COLOR][/B]
+Update your TWRP recovery to latest version which has Oreo changes and fixes.
+
+[B][COLOR=red] is forceclosing on my device, what should I do?[/COLOR][/B]
+  Report the issue with proper logs on our Google+ [URL="https://plus.google.com/communities/110928715574226998482"]Community[/URL]!.
+
+[B][COLOR=red]How to take Logs ?[/COLOR][/B] 
+This doc should help you - [URL="http://telegra.ph/HOW-TO-TAKE-LOGS-06-11"]How to take logs.[/URL]
+ 
+ [B][COLOR=red]I would like to suggest a feature for this ROM?[/COLOR][/B] 
+We are not accepting any feature request for this project as of now, if it's really essential, post it under the "Feature Wish" section in our Google+ Community. We'll certainly look into it.  [B][COLOR=red]
+[/COLOR][/B]
+[B][COLOR=red]Does the zip include SuperSU, or should I flash it separately?[/COLOR][/B] 
+Nope , user has to flash himself.
+
+  [B][COLOR=red] So, you guys, a part of Citrus-CAF?[/COLOR][/B]
+ Aaah, yes! its our another project based on CAF, and featurerich! :) 
+
+[B][COLOR=red]So, I've this working build ready for an unsupported device. I would like to go official with it. What should I do?[/COLOR][/B] Contact us on G+ community with your trees linked on post. 
+
+[B][COLOR=red]So, how do I find out the latest updates, I mean, is there some kinda, a channel, apart from the Google+ Community?[/COLOR][/B] Oh yes, there is. Head to [URL="https://telegram.me/CardinalReleases"]@CardinalReleases[/URL] on  Telegram.
+
+[SIZE=5][B]Source Information:[/B][/SIZE]  
+[URL="https://github.com/Cardinal-AOSP"][B]Cardinal-AOSP on Github[/B][/URL]
+ [URL="https://github.com/BirdSanctuary"][B]Device configurations[/B][/URL]
+[URL="https://plus.google.com/communities/110928715574226998482"][B]G+ Community[/B][/URL]
+[URL="https://telegram.me/CardinalReleases"][B]Telegram Channel[/B][/URL]
+[URL="https://telegram.me/CardinalAOSP"][B]Telegram Group[/B][/URL]
