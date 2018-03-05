@@ -27,10 +27,9 @@ Cardinal-AOSP is a Custom ROM which was initially based on AOSPB, then we change
 • Add SystemUI Tuner features into Wings
 • Disabled RescueParty
 • Enable Custom shapes option on Launcher3
-• Enable Developer option by default
 • Screenshot sound toggle
 • Reset Battery Stats
-• Ship with Jelly browser
+• Ship with Lightening browser
 • L/R IME/Music Cursors
 • VoLTE icon toggle
 • DND Tile enhancements
@@ -40,6 +39,13 @@ Cardinal-AOSP is a Custom ROM which was initially based on AOSPB, then we change
 • Kill app button from recent screen
 • Mobile data always on disabled by default
 • Append app name to screenshot file name
+• SIM Manual provisioning
+• Quick face unlock
+• Show infinity on large notification
+• Allow hiding vpn, data saver, volte, roaming icon from statusbar
+• Scramble pin layout
+• Package name in app info screen
+• Descriptive vendor image mismatch message
 
 [SIZE=4] [B]*Wings*[/B][/SIZE]
 [B][SIZE=3] *General*[/SIZE][/B]
@@ -47,6 +53,8 @@ Cardinal-AOSP is a Custom ROM which was initially based on AOSPB, then we change
 • Wake on Plug
 • Sensor block-per package
 • In call vibrations
+• Expanded desktop
+• Scrolling cache
 
 [B][SIZE=3] *Status Bar*[/SIZE][/B]
 • Secured QS
@@ -59,6 +67,10 @@ Cardinal-AOSP is a Custom ROM which was initially based on AOSPB, then we change
 • Battery light/Notification light options
 • Network traffic meter
 • DT2S on Statusbar
+• Battery styles
+• Smart notification
+• Suppress notification 
+• Qs footer warning toggle
 
 [SIZE=3][B]*Buttons* [/B][/SIZE]
 • Volume button wake
@@ -69,6 +81,8 @@ Cardinal-AOSP is a Custom ROM which was initially based on AOSPB, then we change
 • Custom Key rebindings
 • Option to Disable Home key when ringing
 • Screen off actions
+• Swap hw keys
+• Power button as flashlight
 
 [B][SIZE=3]*Lock Screen*[/SIZE][/B]
 • option to hide lockscreen shortcut on secured lockscreen
@@ -80,8 +94,7 @@ Cardinal-AOSP is a Custom ROM which was initially based on AOSPB, then we change
 
   [SIZE=5][B]Downloads:[/B][/SIZE]  
 [B]Download Cardinal-AOSP Official Builds:[/B] [URL="https://sourceforge.net/projects/cardinal-aosp/files/"<devicename>"</devicename>>/"]Sourceforge  [/URL]
-[B]Download 8.1 GApps:[/B] [URL="https://sourceforge.net/projects/cardinal-aosp/files/extras"]Sourceforge[/URL]  
-
+[B]Download 8.1 GApps:[/B] [URL="http://opengapps.org"]OpenGapps[/URL]  
  [SIZE=5][B]Flashing Instructions:[/B][/SIZE]
  [HIDE]- Download ROM and GApps 
 - Reboot to recovery and Backup existing ROM (Just in case!) 
@@ -91,15 +104,14 @@ Cardinal-AOSP is a Custom ROM which was initially based on AOSPB, then we change
 [SIZE=5][B]Credits[/B][/SIZE]
  [HIDE]LineageOS
 NitrogenOS
- AOSPA
+AOSPA
 Omnirom
- Ezio84
+DirtyUnicorns
+Ezio84
+AmirZaidi for his Launcher3 fork
 [URL="https://forum.xda-developers.com/member.php?u=5222216"]@Recenz[/URL] for wonderful bootanimation
 [URL="https://forum.xda-developers.com/member.php?u=7772507"]@Wizper99[/URL] for awesome wallpaper
 [B]Extreme apologies if we've missed out someone, please feel free to PM, in case we've forgotten to pin your name here![/B][/HIDE]
-
-[SIZE=5][B]Bugs:[/B][/SIZE]
-There is webview crash on some apps like voot, use chrome as webview provider for now.
 
 [SIZE=5][B]FAQs:[/B] [/SIZE]
   [B][COLOR=red]On what this ROM is based on?[/COLOR][/B] 
