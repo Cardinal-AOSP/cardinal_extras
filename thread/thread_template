@@ -14,7 +14,7 @@ Cardinal-AOSP is a Custom ROM which was initially based on AOSPB, then we change
 [COLOR=red]NOTE: we won't be accepting any feature requests, and only essential features will be added to enhance stock AOSP experience.[/COLOR]
 
  [SIZE=4][B]Changes on top of AOSP:[/B][/SIZE]
- • QS Tiles: Adb over network, Caffeine, Screenshot, Reboot, Sound, Volume, PiP, Headsup, compass, Accidental touch
+ • QS Tiles: Adb over network, Caffeine, Screenshot, Reboot, Sound, Volume, PiP, Headsup, compass, Accidental touch, Sync, Hwkeys
 • Cardinal logo on statusbar
 • Signature spoofing support for MicroG
 • Comes with Pixel/Stock theme
@@ -46,6 +46,9 @@ Cardinal-AOSP is a Custom ROM which was initially based on AOSPB, then we change
 • Scramble pin layout
 • Package name in app info screen
 • Descriptive vendor image mismatch message
+• Bur-in protection (device specific)
+• Enhanced call blocking support
+• Dialer number lookup
 
 [SIZE=4] [B]*Wings*[/B][/SIZE]
 [B][SIZE=3] *General*[/SIZE][/B]
@@ -71,6 +74,7 @@ Cardinal-AOSP is a Custom ROM which was initially based on AOSPB, then we change
 • Smart notification
 • Suppress notification 
 • Qs footer warning toggle
+• Auto brightness icon toggle
 
 [SIZE=3][B]*Buttons* [/B][/SIZE]
 • Volume button wake
